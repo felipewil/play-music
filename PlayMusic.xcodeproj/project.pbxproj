@@ -21,6 +21,10 @@
 		CD4AB60B29291DFD002A3FC5 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4AB60A29291DFD002A3FC5 /* Track.swift */; };
 		CD4AB60D29291E5A002A3FC5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4AB60C29291E5A002A3FC5 /* HomeViewModel.swift */; };
 		CD4AB60F2929264B002A3FC5 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4AB60E2929264B002A3FC5 /* Chart.swift */; };
+		CDD035EB292AC5390020B0A7 /* TrackControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD035EA292AC5390020B0A7 /* TrackControlsViewController.swift */; };
+		CDD035F1292AC7430020B0A7 /* TrackControlsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD035F0292AC7430020B0A7 /* TrackControlsViewModel.swift */; };
+		CDD035F3292AC7900020B0A7 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD035F2292AC7900020B0A7 /* Notifications.swift */; };
+		CDD035F5292ACA530020B0A7 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD035F4292ACA530020B0A7 /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 		CD4AB60A29291DFD002A3FC5 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		CD4AB60C29291E5A002A3FC5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CD4AB60E2929264B002A3FC5 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		CDD035EA292AC5390020B0A7 /* TrackControlsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackControlsViewController.swift; sourceTree = "<group>"; };
+		CDD035F0292AC7430020B0A7 /* TrackControlsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackControlsViewModel.swift; sourceTree = "<group>"; };
+		CDD035F2292AC7900020B0A7 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		CDD035F4292ACA530020B0A7 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +133,7 @@
 				CD3465C9292A5FF900771D87 /* Track */,
 				CD4AB60929291DF3002A3FC5 /* Models */,
 				CD3465C8292A5FE300771D87 /* Home */,
+				CDD035EC292AC53D0020B0A7 /* TrackControls */,
 				CD4AB60629291DA7002A3FC5 /* Utils */,
 				CD4AB5F129290B1A002A3FC5 /* AppDelegate.swift */,
 				CD4AB5F329290B1A002A3FC5 /* SceneDelegate.swift */,
@@ -139,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				CD4AB60729291DBB002A3FC5 /* MusicManager.swift */,
+				CDD035F2292AC7900020B0A7 /* Notifications.swift */,
+				CDD035F4292ACA530020B0A7 /* UIImageView+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -152,6 +163,31 @@
 				CD4AB60E2929264B002A3FC5 /* Chart.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CDD035EC292AC53D0020B0A7 /* TrackControls */ = {
+			isa = PBXGroup;
+			children = (
+				CDD035ED292AC5510020B0A7 /* Views */,
+				CDD035EE292AC7320020B0A7 /* ViewModels */,
+			);
+			path = TrackControls;
+			sourceTree = "<group>";
+		};
+		CDD035ED292AC5510020B0A7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CDD035EA292AC5390020B0A7 /* TrackControlsViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CDD035EE292AC7320020B0A7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CDD035F0292AC7430020B0A7 /* TrackControlsViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD035F5292ACA530020B0A7 /* UIImageView+Extensions.swift in Sources */,
+				CDD035EB292AC5390020B0A7 /* TrackControlsViewController.swift in Sources */,
 				CD4AB5F629290B1A002A3FC5 /* HomeViewController.swift in Sources */,
 				CD4AB60D29291E5A002A3FC5 /* HomeViewModel.swift in Sources */,
 				CD3465CB292A600A00771D87 /* TrackCell.swift in Sources */,
@@ -237,6 +275,8 @@
 				CD4AB60829291DBB002A3FC5 /* MusicManager.swift in Sources */,
 				CD4AB5F229290B1A002A3FC5 /* AppDelegate.swift in Sources */,
 				CD3465D1292A639A00771D87 /* TrackViewModel.swift in Sources */,
+				CDD035F3292AC7900020B0A7 /* Notifications.swift in Sources */,
+				CDD035F1292AC7430020B0A7 /* TrackControlsViewModel.swift in Sources */,
 				CD4AB5F429290B1A002A3FC5 /* SceneDelegate.swift in Sources */,
 				CD4AB60F2929264B002A3FC5 /* Chart.swift in Sources */,
 				CD3465C729292F7B00771D87 /* Album.swift in Sources */,

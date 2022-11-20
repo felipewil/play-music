@@ -17,7 +17,7 @@ struct Track: Codable, Hashable {
 
     var id: Int
     var title: String
-    var link: String
+    var preview: String
     var artist: Artist
     var album: Album
 

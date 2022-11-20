@@ -40,6 +40,7 @@ class TrackCell: UITableViewCell {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
 
+        label.textColor = .label
         label.font = .systemFont(ofSize: Consts.titleFontSize, weight: .semibold)
         label.numberOfLines = 1
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -50,6 +51,7 @@ class TrackCell: UITableViewCell {
     lazy var subtitleLabel: UILabel = {
         let label = UILabel()
 
+        label.textColor = .label
         label.font = .systemFont(ofSize: Consts.subtitleFontSize)
         label.numberOfLines = 1
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -96,8 +98,7 @@ class TrackCell: UITableViewCell {
         self.contentView.addSubview(self.albumImageView)
         
         self.albumImageView.snp.makeConstraints { make in
-            make.top.left.equalToSuperview().offset(Consts.padding)
-            make.bottom.equalToSuperview().inset(Consts.padding)
+            make.top.left.bottom.equalToSuperview().inset(Consts.padding)
             make.size.equalTo(Consts.imageSize)
         }
         
@@ -115,14 +116,8 @@ class TrackCell: UITableViewCell {
 
     private func loadImage(viewModel: TrackViewModel) {
         guard let url = URL(string: viewModel.coverUrl) else { return }
-        
-        URLSession.shared
-            .dataTaskPublisher(for: url)
-            .map(\.data)
-            .catch { _ in Empty() }
-            .receive(on: DispatchQueue.main)
-            .sink { self.albumImageView.image = UIImage(data: $0) }
-            .store(in: &cancellables)
+
+        self.albumImageView.loadImage(url: url).store(in: &cancellables)
     }
 
 }
